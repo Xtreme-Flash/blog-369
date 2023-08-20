@@ -63,4 +63,60 @@ body {
 }
 
 
+.discord-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Adjust the width of articles for different screen sizes */
+.discord-article {
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    flex: calc(33.33% - 1rem); /* Adjust the width for three columns with a small gap */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .discord-article {
+        flex: calc(50% - 1rem); /* Adjust the width for two columns with a small gap */
+    }
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 480px) {
+    .discord-article {
+        flex: 100%; /* Full width for single column on smaller screens */
+    }
+}
+
+.discord-article h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.discord-article img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.discord-article p {
+    line-height: 1.6;
+}
+
+.discord-article a {
+    color: #7289DA; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.discord-article a:hover {
+    text-decoration: underline;
+}
+
+
+
 /* Rest of your styles for header, main, and footer... */
